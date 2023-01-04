@@ -9,7 +9,7 @@ int main() {
     DDRD |= 0xFC;  // sets the last 6 bits (11111100)
   
     while(1) {
-        for(unsigned char i=0; i <= 63; i++) {  // 2^6 - 1
+        for(uint8_t i=0; i <= 63; i++) {  // 2^6 - 1
             PORTD = (i << 2);  // there are no leds connected in the first 2 PORTD pins
             _delay_ms(500);
         }
